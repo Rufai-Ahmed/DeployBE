@@ -7,7 +7,7 @@ const URL: string | undefined = process.env.DATABASE_STRING;
 
 export const dbConfig = async () => {
   try {
-    await connect("mongodb://localhost:27017/flowDB"!).then(() => {
+    await connect(URL!).then(() => {
       console.log("DB connected");
     });
   } catch (error) {
